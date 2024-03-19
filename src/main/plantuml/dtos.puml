@@ -1,0 +1,37 @@
+@startuml
+
+class DietsDTO {
+    - List<String> diets
+    + List<String> getDiets()
+    + void setDiets(List<String> diets)
+}
+
+class IngredientDTO {
+    - String unitOfMeasurement
+    - Long quantity
+    - String name
+}
+
+class IngredientsDTO {
+    - List<IngredientDTO> ingredients
+    + List<IngredientDTO> getIngredients()
+    + void setIngredients(List<IngredientDTO> ingredients)
+}
+
+class MethodDTO {
+    - List<String> method
+    + List<String> getMethod()
+    + void setMethod(List<String> method)
+}
+
+class RecipeDTO {
+    - String id
+    - String name
+    - String description
+    - Long servings
+    - Long preparationTimeMin
+    - Long cookingTimeMin
+    - Long estimatedCostDollars
+}
+
+@enduml

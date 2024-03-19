@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<table>
+    <table>
+        <tr>
+            <td><a href="http://localhost:8080/recipe?id=${recipe.id}" th:text="${recipe.name}"></a></td>
+        </tr>
+        <tr>
+            <table>
+                <tr>
+                    <td th:text="'Cooking Time: ' + ${recipe.cookingTimeMin}"></td>
+                    <td th:text="'Preperation Time: ' + ${recipe.prepTimeMin}"></td>
+                </tr>
+                <tr>
+                    <td th:text="'Servings: ' + ${recipe.servings}"></td>
+                    <td th:text="'Estimated Cost: $' + ${recipe.estimatedCostDollars}"></td>
+                </tr>
+            </table>
+        </tr>
+
+        <br>
+
+        <tr>
+            <td><b>Diets</b></td>
+        </tr>
+        <tr th:each="diet : ${recipe.diets}">
+            <td th:text="${diet.name}"></td>
+        </tr>
+        <tr>
+            <td>
+        <table>
+                <tr>
+                    <td><b>Ingredients</b></td>
+                </tr>
+                <tr th:each="ingredient : ${recipe.ingredients}">
+                    <td th:text="'* ' + ${ingredient.quantity} + 'x ' + ${ingredient.unitOfMeasurement} + ' ' + ${ingredient.name}"></td>
+                </tr>
+        </table>
+            </td>
+            <td>
+        <table>
+                <tr>
+                    <td><b>Method</b></td>
+                </tr>
+                <tr th:each="method : ${recipe.method}">
+                    <td th:text="${method.description}"></td>
+                </tr>
+        </table>
+            </td>
+        </tr>
+
+
+        <br>
+        <hr/>
+    </table>
+
+</table>
+
+</body>
+</html>

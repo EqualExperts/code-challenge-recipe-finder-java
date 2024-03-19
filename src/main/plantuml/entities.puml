@@ -1,0 +1,40 @@
+@startuml
+
+class Recipe {
+    - Long id
+    - String name
+    - String description
+    - Long servings
+    - Long cookingTimeMin
+    - Long prepTimeMin
+    - Long estimatedCostDollars
+    - Set<Ingredient> ingredients
+    - Set<Method> method
+    - Set<Diet> diets
+}
+
+class Method {
+    - Long id
+    - String description
+    - Recipe recipe
+}
+
+class Ingredient {
+    - Long id
+    - String unitOfMeasurement
+    - Long quantity
+    - String name
+    - Recipe recipe
+}
+
+class Diet {
+    - Long id
+    - String name
+    - Recipe recipe
+}
+
+Recipe "1" -- "many" Ingredient : contains
+Recipe "1" -- "many" Method : contains
+Recipe "1" -- "many" Diet : contains
+
+@enduml
