@@ -29,3 +29,12 @@ To import data into the database from the recipes API, send a GET request to htt
 
 You can search for recipes by navigating to http://localhost:8080/recipes
 
+## Doing the challenge
+
+The coding challenge is described in [CHALLENGE.md](CHALLENGE.md).
+
+To complete the challenge:
+- Fork this repo
+- Make your changes
+- Commit and push to your fork
+- Share your fork with < tbd email address >
