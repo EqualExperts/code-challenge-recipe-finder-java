@@ -31,7 +31,7 @@ You can search for recipes by navigating to http://localhost:8080/recipes
 
 ## Doing the challenge
 
-The coding challenge is described in [CHALLENGE.md](CHALLENGE.md).
+The coding challenge is described in CHALLENGE.md.
 
 To complete the challenge:
 - Fork this repo
