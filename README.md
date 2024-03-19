@@ -5,12 +5,26 @@ This service allows the consumer to search its recipe database for recipes that 
 ## Requirements
 
 - Java 11
-- Python 3.11
-- pip
+- maven
+
+## Giving permission for the maven wrapper
+The maven wrapper is included with this project.  You may need to grant permission to execute this file (or use your own wrapper or mvn directly)
+
+```bash
+chmod u+x mvnw
+```
+
+## Compiling the code
+
+```bash
+./mvnw compile
+```
 
 ## Running the tests
 
+```bash
 ./mvnw test
+```
 
 ## Running the service
 
