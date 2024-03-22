@@ -13,8 +13,8 @@ The existing API has the following features:
 # Technical Design
 
 The API is built around an existing recipes back-end API which has these features:
-List all recipe IDs - with names and descriptions, but no other data
-Get recipe details by ID
+- List all recipe IDs - with names and descriptions, but no other data
+- Get recipe details by ID
 
 We do not expect that you will need to modify this API.
 
